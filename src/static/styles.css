@@ -672,3 +672,342 @@ footer {
   padding: 15px;
   font-weight: bold;
 }
+
+/* Announcement Banner with Multiple Items */
+.announcement-banner.hidden {
+  display: none;
+}
+
+.announcement-banner .announcement-item {
+  padding: 8px 0;
+  line-height: 1.5;
+}
+
+/* Modal size variants */
+.modal-content.modal-lg {
+  max-width: 700px;
+  max-height: 80vh;
+  overflow-y: auto;
+}
+
+.close-announcements-modal {
+  position: absolute;
+  right: 12px;
+  top: 8px;
+  font-size: 18px;
+  cursor: pointer;
+  color: var(--text-secondary);
+  line-height: 1;
+}
+
+/* Announcements Management Layout */
+.announcements-management {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+.announcements-list-section,
+.announcements-form-section {
+  display: flex;
+  flex-direction: column;
+}
+
+.announcements-list-section h4,
+.announcements-form-section h4 {
+  color: var(--primary);
+  margin-bottom: 12px;
+  font-size: 1rem;
+  border-bottom: 2px solid var(--primary-light);
+  padding-bottom: 8px;
+}
+
+.announcements-list-section {
+  border-right: 1px solid var(--border);
+  padding-right: 15px;
+  max-height: 400px;
+  overflow-y: auto;
+}
+
+#announcements-list-container {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.no-announcements {
+  color: var(--text-secondary);
+  font-style: italic;
+  text-align: center;
+  padding: 20px 10px;
+  background-color: var(--background);
+  border-radius: 4px;
+}
+
+/* Announcement Item in List */
+.announcement-item-edit {
+  background-color: var(--background);
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  padding: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 10px;
+  transition: all 0.2s ease;
+}
+
+.announcement-item-edit:hover {
+  background-color: #f8f8f8;
+  border-color: var(--primary-light);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.announcement-item-content {
+  flex: 1;
+  min-width: 0;
+}
+
+.announcement-message {
+  margin: 0 0 5px 0;
+  word-wrap: break-word;
+  font-size: 0.9rem;
+  color: var(--text-primary);
+}
+
+.announcement-dates {
+  margin: 0;
+  font-size: 0.75rem;
+  color: var(--text-secondary);
+  line-height: 1.4;
+}
+
+.announcement-actions {
+  display: flex;
+  gap: 5px;
+  flex-shrink: 0;
+}
+
+/* Button Styles */
+.btn-small {
+  padding: 4px 10px;
+  font-size: 0.75rem;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  font-weight: 500;
+}
+
+.btn-edit {
+  background-color: var(--primary-light);
+  color: white;
+}
+
+.btn-edit:hover {
+  background-color: var(--primary);
+}
+
+.btn-delete {
+  background-color: var(--error);
+  color: white;
+}
+
+.btn-delete:hover {
+  background-color: #a32020;
+}
+
+.btn-primary {
+  background-color: var(--primary);
+  color: white;
+  padding: 8px 16px;
+  font-size: 0.9rem;
+}
+
+.btn-primary:hover {
+  background-color: var(--primary-light);
+}
+
+.btn-secondary {
+  background-color: var(--border);
+  color: var(--text-primary);
+  padding: 8px 16px;
+  font-size: 0.9rem;
+}
+
+.btn-secondary:hover {
+  background-color: var(--border-focus);
+}
+
+/* Announcement Form */
+.announcement-form {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.announcement-form .form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.announcement-form label {
+  font-weight: 600;
+  font-size: 0.85rem;
+  color: var(--text-primary);
+}
+
+.announcement-form input[type="text"],
+.announcement-form input[type="date"],
+.announcement-form textarea {
+  padding: 8px;
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  font-family: Arial, sans-serif;
+  font-size: 0.9rem;
+}
+
+.announcement-form input[type="text"]:focus,
+.announcement-form input[type="date"]:focus,
+.announcement-form textarea:focus {
+  outline: none;
+  border-color: var(--primary);
+  box-shadow: 0 0 0 2px rgba(26, 35, 126, 0.1);
+}
+
+.announcement-form textarea {
+  resize: vertical;
+  min-height: 60px;
+}
+
+.form-actions {
+  display: flex;
+  gap: 10px;
+  margin-top: 8px;
+}
+
+.form-actions button {
+  flex: 1;
+}
+
+#announcement-form-message {
+  padding: 8px 12px;
+  border-radius: 4px;
+  text-align: center;
+  font-size: 0.85rem;
+}
+
+/* Message styling (used for both login and form messages) */
+.message {
+  padding: 10px 12px;
+  border-radius: 4px;
+  font-size: 0.85rem;
+  text-align: center;
+  animation: slideInDown 0.3s ease;
+}
+
+.message.success {
+  background-color: var(--success-light);
+  color: var(--success);
+  border: 1px solid var(--success);
+}
+
+.message.error {
+  background-color: var(--error-light);
+  color: var(--error);
+  border: 1px solid var(--error);
+}
+
+.message.info {
+  background-color: var(--info-light);
+  color: var(--info);
+  border: 1px solid var(--info);
+}
+
+@keyframes slideInDown {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsive design for announcements modal */
+@media (max-width: 600px) {
+  .modal-content.modal-lg {
+    max-width: 95%;
+    margin: 10px;
+  }
+
+  .announcements-management {
+    grid-template-columns: 1fr;
+  }
+
+  .announcements-list-section {
+    border-right: none;
+    border-bottom: 1px solid var(--border);
+    padding-right: 0;
+    padding-bottom: 15px;
+    max-height: 300px;
+  }
+
+  .announcement-item-edit {
+    flex-direction: column;
+  }
+
+  .announcement-actions {
+    width: 100%;
+  }
+
+  .announcement-actions button {
+    flex: 1;
+  }
+}
+
+/* Admin Controls in Header */
+#admin-controls {
+  display: flex;
+  align-items: center;
+  margin-right: 15px;
+}
+
+#admin-controls.hidden {
+  display: none;
+}
+
+.announcement-icon {
+  font-size: 1rem;
+}
+
+/* Form group styling */
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.form-group label {
+  font-weight: 600;
+  font-size: 0.85rem;
+  color: var(--text-primary);
+}
+
+.form-group input,
+.form-group textarea {
+  padding: 8px;
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  font-family: Arial, sans-serif;
+  font-size: 0.9rem;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+  outline: none;
+  border-color: var(--primary);
+  box-shadow: 0 0 0 2px rgba(26, 35, 126, 0.1);
+}

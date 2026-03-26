@@ -12,13 +12,19 @@
     />
   </head>
   <body>
-    <div class="announcement-banner">
-  📢 Activity registration is open until the end of the month. Don't lose your spot!
-</div>
+    <div id="announcement-banner" class="announcement-banner hidden">
+      <!-- Announcements will be loaded here dynamically -->
+    </div>
     <header>
       <h1>Mergington High School</h1>
       <h2>Extracurricular Activities</h2>
       <div id="user-controls">
+        <div id="admin-controls" class="hidden">
+          <button id="manage-announcements-button" class="icon-button">
+            <span class="announcement-icon">📌</span>
+            <span>Manage Announcements</span>
+          </button>
+        </div>
         <div id="user-status">
           <button id="login-button" class="icon-button">
             <span class="user-icon">👤</span>
@@ -134,6 +140,17 @@
           <button type="submit">Login</button>
         </form>
         <div id="login-message" class="hidden message"></div>
+      </div>
+    </div>
+
+    <!-- Manage Announcements Modal -->
+    <div id="announcements-modal" class="modal hidden">
+      <div class="modal-content modal-lg">
+        <span class="close-announcements-modal">&times;</span>
+        <h3>Manage Announcements</h3>
+        <div id="announcements-modal-content">
+          <!-- Announcements list and form will be loaded here -->
+        </div>
       </div>
     </div>
 
